@@ -116,15 +116,20 @@ export default class IncidentNormalizer extends BaseNormalizer {
     const times = {};
 
     const arr = _.values(unitStatus);
-    const clearedProperty = _.find([
+
+    let clearedPropeties = [];
+
+    _.map([
       'available',
       'in_quarters',
       'available_radio',
       'available_mobile',
-      'cleared'], s => Object.prototype.hasOwnProperty.call(unitStatus, s));
+      'cleared'], key => clearedPropeties.push(_.get(unitStatus, `${key}`)));
+
+    clearedPropeties = _.filter(clearedPropeties, prop => !_.isNil(prop));
 
     let cleared;
-    if (clearedProperty) cleared = unitStatus[clearedProperty];
+    if (clearedPropeties.length > 0) cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
     else cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
 
     const requirements = {

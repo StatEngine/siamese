@@ -50,4 +50,37 @@ describe('IncidentNormalizer', () => {
     expect(times.response_duration).to.equal(350);
     expect(times.event_duration).to.equal(1400);
   });
+
+  it('calculateUnitStatusExtendedData should calculate event_duration based on earliest cleared timestamp', () => {
+    const unitStatus = {
+      dispatched: {
+        latitude: 38.8703695581824,
+        longitude: -77.15635501332166,
+        timestamp: '2017-12-30T18:37:11-05:00',
+      },
+      enroute: {
+        latitude: 38.8703695581824,
+        longitude: -77.15635501332166,
+        timestamp: '2017-12-30T18:37:42-05:00',
+      },
+      arrived: {
+        latitude: 38.84776403520299,
+        longitude: -77.13305689919378,
+        timestamp: '2017-12-30T18:43:01-05:00',
+      },
+      cleared: {
+        latitude: 38.847789177196,
+        longitude: -77.13341200471721,
+        timestamp: '2017-12-30T18:50:57-05:00',
+      },
+      available: {
+        latitude: 38.847789177196,
+        longitude: -77.13341200471721,
+        timestamp: '2017-12-30T19:50:57-05:00',
+      },
+    };
+
+    const times = IncidentNormalizer.calculateUnitStatusExtendedData(unitStatus);
+    expect(times.event_duration).to.equal(826);
+  });
 });
