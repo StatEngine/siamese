@@ -30,7 +30,6 @@
     "@statengine/schemas": "0.0.5",
     "@statengine/shiftly": "^0.0.10",
     "bluebird": "^3.5.0",
-    "jsonpath": "^0.2.12",
     "jsonschema": "^1.1.1",
     "lodash": "^4.17.4",
     "moment": "^2.19.3",

@@ -120,7 +120,7 @@ export default class IncidentNormalizer extends BaseNormalizer {
       'available',
       'in_quarters',
       'available_radio',
-      'avaiable_mobile',
+      'available_mobile',
       'cleared'], s => Object.prototype.hasOwnProperty.call(unitStatus, s));
 
     let cleared;
