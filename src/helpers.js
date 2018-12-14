@@ -26,23 +26,23 @@ function split(code) {
   };
 }
 
-function getDeterminateDescription(determinate) {
-  if (determinate) {
-    return _.get(CODES, `[${Number(determinate).toString()}]description`)
+function getProtocolDescription(protocol) {
+  if (protocol) {
+    return _.get(CODES, `[${Number(protocol).toString()}]description`)
   }
 }
 
-function getSubDeterminateDescription(determinate, priority, subDeterminate) {
-  if (determinate && priority && subDeterminate) {
+function getSubDeterminateDescription(protocol, determinate, subDeterminate) {
+  if (protocol && determinate && subDeterminate) {
     const [match, noSuffix, suffix] = subDeterminate.toString().match(SUBDETERMINATE_REGEX);
-    return _.get(CODES, `[${Number(determinate).toString()}]priorities[${priority}]subdeterminants[${Number(noSuffix).toString()}.description]`);
+    return _.get(CODES, `[${Number(protocol).toString()}]determinates[${determinate}]subdeterminants[${Number(noSuffix).toString()}.description]`);
   }
 }
 
 export default {
   priorityDispatch: {
     split,
-    getDeterminateDescription,
+    getProtocolDescription,
     getSubDeterminateDescription,
   },
 };

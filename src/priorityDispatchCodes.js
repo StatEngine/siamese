@@ -1,7 +1,7 @@
 const codes = {
   1: {
     description: 'Abdominal Pain/Problems',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Abdominal pain' }
@@ -26,7 +26,7 @@ const codes = {
   },
   2: {
       description: 'Allergies (Reactions)/Envenomations (Stings/Bites)',
-      priorities: {
+      determinates: {
         A: {
           subdeterminants: {
             1: { description: 'No difficulty breathing or swallowing (rash, hives or itching may be present)' },
@@ -61,7 +61,7 @@ const codes = {
     },
   3: {
     description: 'Animal Bites/Attacks',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
@@ -97,7 +97,7 @@ const codes = {
   },
   4: {
     description: 'Assault/Sexual Assault',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
@@ -123,7 +123,7 @@ const codes = {
   },
   5: {
     description: 'Back Pain (Non-Traumatic or Non-Recent Trauma)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Non-traumatic back pain' },
@@ -146,7 +146,7 @@ const codes = {
   },
   6: {
     description: 'Breathing Problems',
-    priorities: {
+    determinates: {
       C: {
         subdeterminants: {
           1: { description: 'Abnormal breathing' },
@@ -169,7 +169,7 @@ const codes = {
   },
   7: {
     description: 'Burns (Scalds)/Explosion (Blast)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Burns <18% body area' },
@@ -208,7 +208,7 @@ const codes = {
   },
   8: {
     description: 'Carbon Monoxide/Inhalation/HAZMAT/CBRN',
-    priorities: {
+    determinates: {
       B: {
         subdeterminants: {
           1: { description: 'Alert without difficulty breathing' },
@@ -237,7 +237,7 @@ const codes = {
   },
   9: {
     description: 'Cardiac or Respiratory Arrest/Death',
-    priorities: {
+    determinates: {
       B: {
         subdeterminants: {
           1: { description: 'Obvious death unquestionable (a through k)' },
@@ -268,7 +268,7 @@ const codes = {
   },
   10: {
     description: 'Chest Pain (Non-Traumatic)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally <35 years old' },
@@ -294,7 +294,7 @@ const codes = {
   },
   11: {
     description: 'Choking',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not choking now (can talk or cry, is alert and breathing normally)' },
@@ -315,7 +315,7 @@ const codes = {
   },
   12: {
     description: 'Convulsions/Seizures',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not seizing now and effective breathing verified (known seizure disorder)' },
@@ -353,7 +353,7 @@ const codes = {
   },
   13: {
     description: 'Diabetic Problems',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Alert and behaving normally' },
@@ -375,7 +375,7 @@ const codes = {
   },
   14: {
     description: 'Drowning (near)/Diving/SCUBA Accident',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Alert and breathing normally (no injuries and out of water)' },
@@ -404,7 +404,7 @@ const codes = {
   },
   15: {
     description: 'Electrocution/Lightning',
-    priorities: {
+    determinates: {
       C: {
         subdeterminants: {
           1: { description: 'Alert and breathing normally' },
@@ -431,7 +431,7 @@ const codes = {
   },
   16: {
     description: 'Eye Problems/Injuries',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Moderate eye injuries' },
@@ -453,7 +453,7 @@ const codes = {
   },
   17: {
     description: 'Falls',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
@@ -481,7 +481,7 @@ const codes = {
   },
   18: {
     description: 'Headache',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally' },
@@ -508,7 +508,7 @@ const codes = {
   },
   19: {
     description: 'Heart Problems/AICD',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Heart rate ≥50 bpm and <130 bpm (without priority symptoms)' },
@@ -540,7 +540,7 @@ const codes = {
   },
   20: {
     description: 'Heat/Cold Exposure',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Alert' },
@@ -567,7 +567,7 @@ const codes = {
   },
   21: {
     description: 'Hemorrhage/Laceration',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not dangerous hemorrhage' },
@@ -600,7 +600,7 @@ const codes = {
   },
   22: {
     description: 'Inaccessible Incident/Other Entrapments (Non-Vehicle)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'No longer trapped (no injuries)' },
@@ -627,7 +627,7 @@ const codes = {
   },
   23: {
     description: 'Overdose/Poisoning (Ingestion)',
-    priorities: {
+    determinates: {
       B: {
         subdeterminants: {
           1: { description: 'Overdose (without priority symptoms)' },
@@ -660,7 +660,7 @@ const codes = {
   },
   24: {
     description: 'Pregnancy/Childbirth/Miscarriage',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: '1st trimester hemorrhage or miscarriage' },
@@ -699,7 +699,7 @@ const codes = {
   },
   25: {
     description: 'Psychiatric/Abnormal Behavior/Suicide Attempt',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Non-suicidal and alert' },
@@ -726,7 +726,7 @@ const codes = {
   },
   26: {
     description: 'Sick Person (Specific Diagnosis)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'No priority symptoms (complaint conditions 2-11 not identified)' },
@@ -795,7 +795,7 @@ const codes = {
   },
   27: {
     description: 'Stab/Gunshot/Penetrating Trauma',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Non-recent (≥6 hours peripheral wounds (without priority symptoms)' },
@@ -823,7 +823,7 @@ const codes = {
   },
   28: {
     description: 'Stroke (CVA)/Transient Ischemic Attack (TIA)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally <35 years old' },
@@ -849,7 +849,7 @@ const codes = {
   },
   29: {
     description: 'Traffic/Transportation Incidents',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: '1st party caller with injury to not dangerous body area' },
@@ -881,7 +881,7 @@ const codes = {
   },
   30: {
     description: 'Traumatic Injuries (Specific)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
@@ -905,7 +905,7 @@ const codes = {
   },
   31: {
     description: 'Unconscious/Fainting (Near)',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Fainting episode(s) and alert ≥35 years old (without cardiac history)' },
@@ -937,7 +937,7 @@ const codes = {
   },
   32: {
     description: 'Unknown Problem (Man Down)',
-    priorities: {
+    determinates: {
       B: {
         subdeterminants: {
           1: { description: 'Standing, sitting, moving or talking' },
@@ -955,7 +955,7 @@ const codes = {
   },
   33: {
     description: 'Transfer/Interfacility/Palliative Care',
-    priorities: {
+    determinates: {
       A: {
         subdeterminants: {
           1: { description: 'Acuity I (no priority symptoms)' },

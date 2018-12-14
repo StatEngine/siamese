@@ -8,9 +8,9 @@ describe('Helpers', () => {
   describe('priorityDispatch Helper', () => {
     describe('Descriptions', () => {
       it('Correctly supplies determinate descriptions in different formats', () => {
-        expect(helpers.priorityDispatch.getDeterminateDescription(1)).to.equal('Abdominal Pain/Problems');
-        expect(helpers.priorityDispatch.getDeterminateDescription('01')).to.equal('Abdominal Pain/Problems');
-        expect(helpers.priorityDispatch.getDeterminateDescription('1')).to.equal('Abdominal Pain/Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription(1)).to.equal('Abdominal Pain/Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription('01')).to.equal('Abdominal Pain/Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription('1')).to.equal('Abdominal Pain/Problems');
       });
 
       it('Correctly supplies subdeterminate descriptions in different formats', () => {
@@ -21,40 +21,40 @@ describe('Helpers', () => {
       });
 
       it('Correctly supplies EMS descriptions', () => {
-        expect(helpers.priorityDispatch.getDeterminateDescription(1)).to.equal('Abdominal Pain/Problems');
-        expect(helpers.priorityDispatch.getDeterminateDescription(2)).to.equal('Allergies (Reactions)/Envenomations (Stings/Bites)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(3)).to.equal('Animal Bites/Attacks');
-        expect(helpers.priorityDispatch.getDeterminateDescription(4)).to.equal('Assault/Sexual Assault');
-        expect(helpers.priorityDispatch.getDeterminateDescription(5)).to.equal('Back Pain (Non-Traumatic or Non-Recent Trauma)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(6)).to.equal('Breathing Problems');
-        expect(helpers.priorityDispatch.getDeterminateDescription(7)).to.equal('Burns (Scalds)/Explosion (Blast)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(8)).to.equal('Carbon Monoxide/Inhalation/HAZMAT/CBRN');
-        expect(helpers.priorityDispatch.getDeterminateDescription(9)).to.equal('Cardiac or Respiratory Arrest/Death');
-        expect(helpers.priorityDispatch.getDeterminateDescription(10)).to.equal('Chest Pain (Non-Traumatic)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(11)).to.equal('Choking');
-        expect(helpers.priorityDispatch.getDeterminateDescription(12)).to.equal('Convulsions/Seizures');
-        expect(helpers.priorityDispatch.getDeterminateDescription(13)).to.equal('Diabetic Problems');
-        expect(helpers.priorityDispatch.getDeterminateDescription(14)).to.equal('Drowning (near)/Diving/SCUBA Accident');
-        expect(helpers.priorityDispatch.getDeterminateDescription(15)).to.equal('Electrocution/Lightning');
-        expect(helpers.priorityDispatch.getDeterminateDescription(16)).to.equal('Eye Problems/Injuries');
-        expect(helpers.priorityDispatch.getDeterminateDescription(17)).to.equal('Falls');
-        expect(helpers.priorityDispatch.getDeterminateDescription(18)).to.equal('Headache');
-        expect(helpers.priorityDispatch.getDeterminateDescription(19)).to.equal('Heart Problems/AICD');
-        expect(helpers.priorityDispatch.getDeterminateDescription(20)).to.equal('Heat/Cold Exposure');
-        expect(helpers.priorityDispatch.getDeterminateDescription(21)).to.equal('Hemorrhage/Laceration');
-        expect(helpers.priorityDispatch.getDeterminateDescription(22)).to.equal('Inaccessible Incident/Other Entrapments (Non-Vehicle)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(23)).to.equal('Overdose/Poisoning (Ingestion)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(24)).to.equal('Pregnancy/Childbirth/Miscarriage');
-        expect(helpers.priorityDispatch.getDeterminateDescription(25)).to.equal('Psychiatric/Abnormal Behavior/Suicide Attempt');
-        expect(helpers.priorityDispatch.getDeterminateDescription(26)).to.equal('Sick Person (Specific Diagnosis)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(27)).to.equal('Stab/Gunshot/Penetrating Trauma');
-        expect(helpers.priorityDispatch.getDeterminateDescription(28)).to.equal('Stroke (CVA)/Transient Ischemic Attack (TIA)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(29)).to.equal('Traffic/Transportation Incidents');
-        expect(helpers.priorityDispatch.getDeterminateDescription(30)).to.equal('Traumatic Injuries (Specific)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(31)).to.equal('Unconscious/Fainting (Near)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(32)).to.equal('Unknown Problem (Man Down)');
-        expect(helpers.priorityDispatch.getDeterminateDescription(33)).to.equal('Transfer/Interfacility/Palliative Care');
-        expect(helpers.priorityDispatch.getDeterminateDescription(34)).to.be.undefined;
+        expect(helpers.priorityDispatch.getProtocolDescription(1)).to.equal('Abdominal Pain/Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription(2)).to.equal('Allergies (Reactions)/Envenomations (Stings/Bites)');
+        expect(helpers.priorityDispatch.getProtocolDescription(3)).to.equal('Animal Bites/Attacks');
+        expect(helpers.priorityDispatch.getProtocolDescription(4)).to.equal('Assault/Sexual Assault');
+        expect(helpers.priorityDispatch.getProtocolDescription(5)).to.equal('Back Pain (Non-Traumatic or Non-Recent Trauma)');
+        expect(helpers.priorityDispatch.getProtocolDescription(6)).to.equal('Breathing Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription(7)).to.equal('Burns (Scalds)/Explosion (Blast)');
+        expect(helpers.priorityDispatch.getProtocolDescription(8)).to.equal('Carbon Monoxide/Inhalation/HAZMAT/CBRN');
+        expect(helpers.priorityDispatch.getProtocolDescription(9)).to.equal('Cardiac or Respiratory Arrest/Death');
+        expect(helpers.priorityDispatch.getProtocolDescription(10)).to.equal('Chest Pain (Non-Traumatic)');
+        expect(helpers.priorityDispatch.getProtocolDescription(11)).to.equal('Choking');
+        expect(helpers.priorityDispatch.getProtocolDescription(12)).to.equal('Convulsions/Seizures');
+        expect(helpers.priorityDispatch.getProtocolDescription(13)).to.equal('Diabetic Problems');
+        expect(helpers.priorityDispatch.getProtocolDescription(14)).to.equal('Drowning (near)/Diving/SCUBA Accident');
+        expect(helpers.priorityDispatch.getProtocolDescription(15)).to.equal('Electrocution/Lightning');
+        expect(helpers.priorityDispatch.getProtocolDescription(16)).to.equal('Eye Problems/Injuries');
+        expect(helpers.priorityDispatch.getProtocolDescription(17)).to.equal('Falls');
+        expect(helpers.priorityDispatch.getProtocolDescription(18)).to.equal('Headache');
+        expect(helpers.priorityDispatch.getProtocolDescription(19)).to.equal('Heart Problems/AICD');
+        expect(helpers.priorityDispatch.getProtocolDescription(20)).to.equal('Heat/Cold Exposure');
+        expect(helpers.priorityDispatch.getProtocolDescription(21)).to.equal('Hemorrhage/Laceration');
+        expect(helpers.priorityDispatch.getProtocolDescription(22)).to.equal('Inaccessible Incident/Other Entrapments (Non-Vehicle)');
+        expect(helpers.priorityDispatch.getProtocolDescription(23)).to.equal('Overdose/Poisoning (Ingestion)');
+        expect(helpers.priorityDispatch.getProtocolDescription(24)).to.equal('Pregnancy/Childbirth/Miscarriage');
+        expect(helpers.priorityDispatch.getProtocolDescription(25)).to.equal('Psychiatric/Abnormal Behavior/Suicide Attempt');
+        expect(helpers.priorityDispatch.getProtocolDescription(26)).to.equal('Sick Person (Specific Diagnosis)');
+        expect(helpers.priorityDispatch.getProtocolDescription(27)).to.equal('Stab/Gunshot/Penetrating Trauma');
+        expect(helpers.priorityDispatch.getProtocolDescription(28)).to.equal('Stroke (CVA)/Transient Ischemic Attack (TIA)');
+        expect(helpers.priorityDispatch.getProtocolDescription(29)).to.equal('Traffic/Transportation Incidents');
+        expect(helpers.priorityDispatch.getProtocolDescription(30)).to.equal('Traumatic Injuries (Specific)');
+        expect(helpers.priorityDispatch.getProtocolDescription(31)).to.equal('Unconscious/Fainting (Near)');
+        expect(helpers.priorityDispatch.getProtocolDescription(32)).to.equal('Unknown Problem (Man Down)');
+        expect(helpers.priorityDispatch.getProtocolDescription(33)).to.equal('Transfer/Interfacility/Palliative Care');
+        expect(helpers.priorityDispatch.getProtocolDescription(34)).to.be.undefined;
       });
 
       it('Correctly supplies EMS sub determinates descriptions', () => {
