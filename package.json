@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@statengine/schemas": "0.0.5",
-    "@statengine/shiftly": "^0.0.10",
+    "@statengine/shiftly": "StatEngine/shiftly#multi-refactor",
     "bluebird": "^3.5.0",
     "jsonschema": "^1.1.1",
     "lodash": "^4.17.4",

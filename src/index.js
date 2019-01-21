@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import proj4 from 'proj4';
 import _ from 'lodash';
 import { validate } from 'jsonschema';
-import { ShiftConfiguration } from '@statengine/shiftly';
+import { ShiftConfiguration, FirecaresLookup } from '@statengine/shiftly';
 import { schemas } from '@statengine/schemas';
 import fs from 'fs';
 import xml2js from 'xml2js';
@@ -65,7 +65,13 @@ export default class IncidentNormalizer extends BaseNormalizer {
     this.firecaresId = firecaresId;
     this.name = name;
     this.state = state;
-    this.shiftConfig = new ShiftConfiguration(shiftConfig);
+    // First use firecaresId to see if shift configuration exists in shiftly
+    const shiftlyConfig = IncidentNormalizer.lookupShiftlyConfig(this.firecaresId);
+    if (shiftlyConfig != null) {
+      this.shiftConfig = shiftlyConfig;
+    } else {
+      this.shiftConfig = new ShiftConfiguration(shiftConfig);
+    }
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -248,6 +254,15 @@ export default class IncidentNormalizer extends BaseNormalizer {
       });
     })
       .then(jsons => this.fromStrings(jsons, ...args));
+  }
+
+  static lookupShiftlyConfig(firecaresId) {
+    const shiftlyFactoryMethod = FirecaresLookup[firecaresId];
+    let shiftlyConfig = null;
+    if (shiftlyFactoryMethod != null) {
+      shiftlyConfig = shiftlyFactoryMethod();
+    }
+    return shiftlyConfig;
   }
 }
 
