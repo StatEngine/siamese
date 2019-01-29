@@ -135,8 +135,11 @@ export default class IncidentNormalizer extends BaseNormalizer {
     clearedPropeties = _.filter(clearedPropeties, prop => !_.isNil(prop));
 
     let cleared;
-    if (clearedPropeties.length > 0) cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
-    else cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
+    if (clearedPropeties.length > 0) {
+      cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
+    } else {
+      cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
+    }
 
     const requirements = {
       travel_duration: [unitStatus.arrived, unitStatus.enroute],
