@@ -27,8 +27,8 @@
     "eslint-plugin-react": "^7.3.0"
   },
   "dependencies": {
-    "@statengine/schemas": "0.0.5",
-    "@statengine/shiftly": "StatEngine/shiftly#multi-refactor",
+    "@statengine/schemas": "latest",
+    "@statengine/shiftly": "latest",
     "bluebird": "^3.5.0",
     "jsonschema": "^1.1.1",
     "lodash": "^4.17.4",
