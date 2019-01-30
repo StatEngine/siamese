@@ -15,6 +15,12 @@ describe('IncidentNormalizer', () => {
     expect(IncidentNormalizer.latLongToGeohash(0, 0)).to.equal('7zzzzzzzzzzz');
   });
 
+  it('should retrieve shiftly configurations for valid ids', () => {
+    expect(IncidentNormalizer.lookupShiftlyConfig('90552')).to.not.equal(null);
+    expect(IncidentNormalizer.lookupShiftlyConfig('05102')).to.not.equal(null);
+    expect(IncidentNormalizer.lookupShiftlyConfig('000')).to.equal(null);
+  });
+
   it('calculateUnitStatusExtendedData should calculate event_duration based on latest timestamp', () => {
     const unitStatus = {
       dispatched: {

@@ -4,8 +4,8 @@ const codes = {
     determinates: {
       A: {
         subdeterminants: {
-          1: { description: 'Abdominal pain' }
-        }
+          1: { description: 'Abdominal pain' },
+        },
       },
       C: {
         subdeterminants: {
@@ -15,50 +15,50 @@ const codes = {
           4: { description: 'Females with fainting or near fainting 12-50 years old' },
           5: { description: 'Males with pain above navel ≥35 years old' },
           6: { description: 'Females with pain above navel ≥ 45 years old' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
-        }
-      }
-    }
+        },
+      },
+    },
   },
   2: {
-      description: 'Allergies (Reactions)/Envenomations (Stings/Bites)',
-      determinates: {
-        A: {
-          subdeterminants: {
-            1: { description: 'No difficulty breathing or swallowing (rash, hives or itching may be present)' },
-            2: { description: 'Spider bite' }
-          }
+    description: 'Allergies (Reactions)/Envenomations (Stings/Bites)',
+    determinates: {
+      A: {
+        subdeterminants: {
+          1: { description: 'No difficulty breathing or swallowing (rash, hives or itching may be present)' },
+          2: { description: 'Spider bite' },
         },
-        B: {
-          subdeterminants: {
-            1: { description: 'Unknown status/other codes not applicable' },
-          }
+      },
+      B: {
+        subdeterminants: {
+          1: { description: 'Unknown status/other codes not applicable' },
         },
-        C: {
-          subdeterminants: {
-            1: { description: 'Difficulty breathing or swallowing' },
-            2: { description: 'History of severe allergic reaction' },
-          }
+      },
+      C: {
+        subdeterminants: {
+          1: { description: 'Difficulty breathing or swallowing' },
+          2: { description: 'History of severe allergic reaction' },
         },
-        D: {
-          subdeterminants: {
-            1: { description: 'Not alert' },
-            2: { description: 'Difficulty speaking between breaths' },
-            3: { description: 'Swarming attack (bee, wasp, hornet)' },
-            4: { description: 'Snakebite' },
-          }
+      },
+      D: {
+        subdeterminants: {
+          1: { description: 'Not alert' },
+          2: { description: 'Difficulty speaking between breaths' },
+          3: { description: 'Swarming attack (bee, wasp, hornet)' },
+          4: { description: 'Snakebite' },
         },
-        E: {
-          subdeterminants: {
-            1: { description: 'Ineffective breathing' },
-          }
-        }
-      }
+      },
+      E: {
+        subdeterminants: {
+          1: { description: 'Ineffective breathing' },
+        },
+      },
     },
+  },
   3: {
     description: 'Animal Bites/Attacks',
     determinates: {
@@ -66,21 +66,21 @@ const codes = {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
           2: { description: 'Non-recent (≥6 hours) injuries (without priority symptoms)' },
-          3: { description: 'Superficial bites' }
-        }
+          3: { description: 'Superficial bites' },
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Possibly dangerous body area' },
           2: { description: 'Serious hemorrhage' },
           3: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Difficulty breathing or swallowing' },
           2: { description: 'History of severe allergic reaction' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -91,9 +91,9 @@ const codes = {
           5: { description: 'Large animal' },
           6: { description: 'Exotic animal' },
           7: { description: 'Attack of multiple animals' },
-        }
+        },
       },
-    }
+    },
   },
   4: {
     description: 'Assault/Sexual Assault',
@@ -102,14 +102,14 @@ const codes = {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
           2: { description: 'Non-recent (≥6 hours) injuries (without priority symptoms)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Possibly dangerous body area' },
           2: { description: 'Serious hemorrhage' },
           3: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -117,9 +117,9 @@ const codes = {
           2: { description: 'Not alert' },
           3: { description: 'Chest or neck injury (with difficulty breathing)' },
           4: { description: 'Multiple victims' },
-        }
+        },
       },
-    }
+    },
   },
   5: {
     description: 'Back Pain (Non-Traumatic or Non-Recent Trauma)',
@@ -128,21 +128,21 @@ const codes = {
         subdeterminants: {
           1: { description: 'Non-traumatic back pain' },
           2: { description: 'Non-recent (≥6 hours) traumatic back pain (without priority symptoms)' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Suspected aortic aneurysm (tearing/ripping pain) ≥50 years old' },
           2: { description: 'Known aortic aneurysm' },
           3: { description: 'Fainting or nearly fainting ≥50 years old' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
-        }
+        },
       },
-    }
+    },
   },
   6: {
     description: 'Breathing Problems',
@@ -150,7 +150,7 @@ const codes = {
       C: {
         subdeterminants: {
           1: { description: 'Abnormal breathing' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -158,14 +158,14 @@ const codes = {
           2: { description: 'Difficulty speaking between breaths' },
           3: { description: 'Changing color' },
           4: { description: 'Clammy' },
-        }
+        },
       },
       E: {
         subdeterminants: {
           1: { description: 'Ineffective breathing' },
-        }
+        },
       },
-    }
+    },
   },
   7: {
     description: 'Burns (Scalds)/Explosion (Blast)',
@@ -175,13 +175,13 @@ const codes = {
           1: { description: 'Burns <18% body area' },
           2: { description: 'Fire alarm (unknown situation)' },
           3: { description: 'Sunburn or minor burns (≤ hand size)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Blast injuries (without priority symptoms)' },
           2: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -189,7 +189,7 @@ const codes = {
           2: { description: 'Difficulty breathing' },
           3: { description: 'Burns ≥18% body area' },
           4: { description: 'Significant facial burns' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -197,14 +197,14 @@ const codes = {
           2: { description: 'Unconscious or arrest' },
           3: { description: 'Not alert' },
           4: { description: 'Difficulty speaking between breaths' },
-        }
+        },
       },
       E: {
         subdeterminants: {
           1: { description: 'Person on fire' },
-        }
+        },
       },
-    }
+    },
   },
   8: {
     description: 'Carbon Monoxide/Inhalation/HAZMAT/CBRN',
@@ -212,12 +212,12 @@ const codes = {
       B: {
         subdeterminants: {
           1: { description: 'Alert without difficulty breathing' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Alert with difficulty breathing' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -226,14 +226,14 @@ const codes = {
           3: { description: 'Difficulty speaking between breaths' },
           4: { description: 'Multiple victims' },
           5: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       O: {
         subdeterminants: {
           1: { description: 'Carbon monoxide detector alarm (without priority symptoms)' },
-        }
+        },
       },
-    }
+    },
   },
   9: {
     description: 'Cardiac or Respiratory Arrest/Death',
@@ -241,13 +241,13 @@ const codes = {
       B: {
         subdeterminants: {
           1: { description: 'Obvious death unquestionable (a through k)' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Ineffective breathing' },
           2: { description: 'Obvious or expected death questionable' },
-        }
+        },
       },
       E: {
         subdeterminants: {
@@ -257,14 +257,14 @@ const codes = {
           4: { description: 'Strangulation' },
           5: { description: 'Suffocation' },
           6: { description: 'Underwater' },
-        }
+        },
       },
       O: {
         subdeterminants: {
           1: { description: 'Expected death unquestionable (x through z)' },
-        }
+        },
       },
-    }
+    },
   },
   10: {
     description: 'Chest Pain (Non-Traumatic)',
@@ -272,7 +272,7 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally <35 years old' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -280,7 +280,7 @@ const codes = {
           2: { description: 'Heart attack or angina history' },
           3: { description: 'Cocaine' },
           4: { description: 'Breathing normally ≥35 years old' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -288,9 +288,9 @@ const codes = {
           2: { description: 'Difficulty speaking between breaths' },
           3: { description: 'Changing color' },
           4: { description: 'Clammy' },
-        }
+        },
       },
-    }
+    },
   },
   11: {
     description: 'Choking',
@@ -298,20 +298,20 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Not choking now (can talk or cry, is alert and breathing normally)' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Abnormal breathing (partial obstruction)' },
           2: { description: 'Not alert' },
-        }
+        },
       },
       E: {
         subdeterminants: {
           1: { description: 'Complete obstruction/ineffective breathing' },
-        }
+        },
       },
-    }
+    },
   },
   12: {
     description: 'Convulsions/Seizures',
@@ -323,12 +323,12 @@ const codes = {
           3: { description: 'Not seizing now and effective breathing verified (≤6 years old, confirmed no seizure disorder)' },
           4: { description: 'Focal seizure (alert)' },
           5: { description: 'Impending seizure (aura)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Effective breathing not verified <35 years old' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -339,7 +339,7 @@ const codes = {
           5: { description: 'History of stroke or brain tumor' },
           6: { description: 'Overdose/poisoning (ingestion)' },
           7: { description: 'Atypical seizure' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -347,9 +347,9 @@ const codes = {
           2: { description: 'Continuous or multiple seizures' },
           3: { description: 'Agonal/ineffective breathing' },
           4: { description: 'Effective breathing not verified, patient ≥35 years old' },
-        }
+        },
       },
-    }
+    },
   },
   13: {
     description: 'Diabetic Problems',
@@ -357,21 +357,21 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Alert and behaving normally' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Not alert' },
           2: { description: 'Abnormal behavior' },
           3: { description: 'Abnormal breathing' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Unconscious' },
-        }
+        },
       },
-    }
+    },
   },
   14: {
     description: 'Drowning (near)/Diving/SCUBA Accident',
@@ -379,18 +379,18 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Alert and breathing normally (no injuries and out of water)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Alert and breathing normally (injuries or in water)' },
           2: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Alert with abnormal breathing' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -398,9 +398,9 @@ const codes = {
           2: { description: 'Not alert' },
           3: { description: 'Diving or suspected neck injury' },
           4: { description: 'SCUBA accident' },
-        }
+        },
       },
-    }
+    },
   },
   15: {
     description: 'Electrocution/Lightning',
@@ -408,7 +408,7 @@ const codes = {
       C: {
         subdeterminants: {
           1: { description: 'Alert and breathing normally' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -420,14 +420,14 @@ const codes = {
           6: { description: 'Not alert' },
           7: { description: 'Abnormal breathing' },
           8: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       E: {
         subdeterminants: {
           1: { description: 'Not breathing/ineffective breathing' },
-        }
+        },
       },
-    }
+    },
   },
   16: {
     description: 'Eye Problems/Injuries',
@@ -437,19 +437,19 @@ const codes = {
           1: { description: 'Moderate eye injuries' },
           2: { description: 'Minor eye injuries' },
           3: { description: 'Medical eye problems' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Severe eye injuries' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
-        }
+        },
       },
-    }
+    },
   },
   17: {
     description: 'Falls',
@@ -459,14 +459,14 @@ const codes = {
           1: { description: 'Not dangerous body area' },
           2: { description: 'Non-recent (≥6 hours) injuries (without priority symptoms)' },
           3: { description: 'Public assist (no injuries and no priority symptoms)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Possibly dangerous body area' },
           2: { description: 'Serious hemorrhage' },
           3: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -475,9 +475,9 @@ const codes = {
           3: { description: 'Not alert' },
           4: { description: 'Chest or neck injury (with difficulty breathing)' },
           5: { description: 'Long fall' },
-        }
+        },
       },
-    }
+    },
   },
   18: {
     description: 'Headache',
@@ -485,12 +485,12 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -502,9 +502,9 @@ const codes = {
           6: { description: 'Paralysis' },
           7: { description: 'Change in behavior (≤3 hours)' },
 
-        }
+        },
       },
-    }
+    },
   },
   19: {
     description: 'Heart Problems/AICD',
@@ -513,7 +513,7 @@ const codes = {
         subdeterminants: {
           1: { description: 'Heart rate ≥50 bpm and <130 bpm (without priority symptoms)' },
           2: { description: 'Chest pain <35 years old (without priority symptoms)' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -525,7 +525,7 @@ const codes = {
           6: { description: 'Heart rate <50 bpm or ≥130 bpm (without priority symptoms)' },
           7: { description: 'Unknown status/other codes not applicable' },
 
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -534,9 +534,9 @@ const codes = {
           3: { description: 'Changing color' },
           4: { description: 'Clammy' },
           5: { description: 'Just resuscitated and/or defibrillated (external)' },
-        }
+        },
       },
-    }
+    },
   },
   20: {
     description: 'Heat/Cold Exposure',
@@ -544,26 +544,26 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Alert' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Change in skin color' },
           2: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Heart attack or angina history' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
           2: { description: 'Multiple victims (with priority symptoms)' },
-        }
+        },
       },
-    }
+    },
   },
   21: {
     description: 'Hemorrhage/Laceration',
@@ -572,7 +572,7 @@ const codes = {
         subdeterminants: {
           1: { description: 'Not dangerous hemorrhage' },
           2: { description: 'Minor hemorrhage' },
-        }
+        },
       },
       B: {
         subdeterminants: {
@@ -580,13 +580,13 @@ const codes = {
           2: { description: 'Serious hemorrhage' },
           3: { description: 'Bleeding disorder' },
           4: { description: 'Blood thinners' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Hemorrhage through tubes' },
           2: { description: 'Hemorrhage of dialysis fistula' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -594,9 +594,9 @@ const codes = {
           2: { description: 'Not alert' },
           3: { description: 'Dangerous hemorrhage' },
           4: { description: 'Abnormal breathing' },
-        }
+        },
       },
-    }
+    },
   },
   22: {
     description: 'Inaccessible Incident/Other Entrapments (Non-Vehicle)',
@@ -604,14 +604,14 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'No longer trapped (no injuries)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'No longer trapped (unknown injuries)' },
           2: { description: 'Peripheral entrapment only' },
           3: { description: 'Unknown status (investigation)/other codes not applicable' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -621,9 +621,9 @@ const codes = {
           4: { description: 'Confined space rescue' },
           5: { description: 'Inaccessible terrain situation' },
           6: { description: 'Mudslide/avalanche' },
-        }
+        },
       },
-    }
+    },
   },
   23: {
     description: 'Overdose/Poisoning (Ingestion)',
@@ -631,7 +631,7 @@ const codes = {
       B: {
         subdeterminants: {
           1: { description: 'Overdose (without priority symptoms)' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -643,20 +643,20 @@ const codes = {
           6: { description: 'Acid or alkali (lye)' },
           7: { description: 'Unknown status/other codes not applicable' },
           8: { description: 'Poison Control request for response' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Unconscious' },
           2: { description: 'Changing color' },
-        }
+        },
       },
       O: {
         subdeterminants: {
           1: { description: 'Poisoning (without priority symptoms)' },
-        }
+        },
       },
-    }
+    },
   },
   24: {
     description: 'Pregnancy/Childbirth/Miscarriage',
@@ -664,20 +664,20 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: '1st trimester hemorrhage or miscarriage' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Labor (delivery not imminent, ≥5 months/20 weeks)' },
           2: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: '2nd trimester hemorrhage or miscarriage' },
           2: { description: '1st trimester serious hemorrhage' },
           3: { description: 'Baby born (no complications)' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -688,14 +688,14 @@ const codes = {
           5: { description: 'High risk complications' },
           6: { description: 'Baby born (complications with baby)' },
           7: { description: 'Baby born (complications with mother)' },
-        }
+        },
       },
       O: {
         subdeterminants: {
           1: { description: 'Waters broken (no contractions or presenting parts)' },
-        }
+        },
       },
-    }
+    },
   },
   25: {
     description: 'Psychiatric/Abnormal Behavior/Suicide Attempt',
@@ -704,7 +704,7 @@ const codes = {
         subdeterminants: {
           1: { description: 'Non-suicidal and alert' },
           2: { description: 'Suicidal (not threatening) and alert' },
-        }
+        },
       },
       B: {
         subdeterminants: {
@@ -714,15 +714,15 @@ const codes = {
           4: { description: 'Jumper (threatening)' },
           5: { description: 'Near hanging, strangulation or suffocation (alert)' },
           6: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
           2: { description: 'Dangerous hemorrhage' },
-        }
+        },
       },
-    }
+    },
   },
   26: {
     description: 'Sick Person (Specific Diagnosis)',
@@ -740,24 +740,24 @@ const codes = {
           9: { description: 'Transportation only' },
           10: { description: 'Unwell/ill' },
           11: { description: 'Vomiting' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Altered level of consciousness' },
           2: { description: 'Abnormal breathing' },
           3: { description: 'Sickle cell crisis/thalassemia' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Not alert' },
-        }
+        },
       },
       O: {
         subdeterminants: {
@@ -789,9 +789,9 @@ const codes = {
           26: { description: 'Sore throat (without difficulty breathing or swallowing' },
           27: { description: 'Toothache (without jaw pain)' },
           28: { description: 'Wound infected (focal or surface)' },
-        }
+        },
       },
-    }
+    },
   },
   27: {
     description: 'Stab/Gunshot/Penetrating Trauma',
@@ -799,7 +799,7 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Non-recent (≥6 hours peripheral wounds (without priority symptoms)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
@@ -808,7 +808,7 @@ const codes = {
           3: { description: 'Serious hemorrhage' },
           4: { description: 'Unknown status/other codes not applicable' },
           5: { description: 'Obvious death (explosive GSW to head)' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -817,9 +817,9 @@ const codes = {
           3: { description: 'Central wounds' },
           4: { description: 'Multiple wounds' },
           5: { description: 'Multiple victims' },
-        }
+        },
       },
-    }
+    },
   },
   28: {
     description: 'Stroke (CVA)/Transient Ischemic Attack (TIA)',
@@ -827,7 +827,7 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: 'Breathing normally <35 years old' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -843,9 +843,9 @@ const codes = {
           10: { description: 'TIA (mini-stroke) history' },
           11: { description: 'Breathing normally ≥35 years old' },
           12: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
-    }
+    },
   },
   29: {
     description: 'Traffic/Transportation Incidents',
@@ -853,7 +853,7 @@ const codes = {
       A: {
         subdeterminants: {
           1: { description: '1st party caller with injury to not dangerous body area' },
-        }
+        },
       },
       B: {
         subdeterminants: {
@@ -861,7 +861,7 @@ const codes = {
           2: { description: 'Serious hemorrhage' },
           3: { description: 'Other hazards' },
           4: { description: 'Unknown status/other codes not applicable' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -870,14 +870,14 @@ const codes = {
           3: { description: 'Hazmat' },
           4: { description: 'Pinned (trapped victim)' },
           5: { description: 'Not alert' },
-        }
+        },
       },
       O: {
         subdeterminants: {
           1: { description: 'No injuries (confirmed)' },
-        }
+        },
       },
-    }
+    },
   },
   30: {
     description: 'Traumatic Injuries (Specific)',
@@ -886,22 +886,22 @@ const codes = {
         subdeterminants: {
           1: { description: 'Not dangerous body area' },
           2: { description: 'Non-recent (≥6 hours) injuries (without priority symptoms)' },
-        }
+        },
       },
       B: {
         subdeterminants: {
           1: { description: 'Possibly dangerous body area' },
           2: { description: 'Serious hemorrhage' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Unconscious or arrest' },
           2: { description: 'Not alert' },
           3: { description: 'Chest or neck injury (with difficulty breathing)' },
-        }
+        },
       },
-    }
+    },
   },
   31: {
     description: 'Unconscious/Fainting (Near)',
@@ -911,14 +911,14 @@ const codes = {
           1: { description: 'Fainting episode(s) and alert ≥35 years old (without cardiac history)' },
           2: { description: 'Fainting episode(s) and alert <35 years old (with cardiac history)' },
           3: { description: 'Fainting episode(s) and alert <35 years old (without cardiac history)' },
-        }
+        },
       },
       C: {
         subdeterminants: {
           1: { description: 'Alert with abnormal breathing' },
           2: { description: 'Fainting episode(s) and alert ≥35 years old (with cardiac history)' },
           3: { description: 'Females 12-50 years old with abdominal pain' },
-        }
+        },
       },
       D: {
         subdeterminants: {
@@ -926,14 +926,14 @@ const codes = {
           2: { description: 'Unconscious - effective breathing' },
           3: { description: 'Not alert' },
           4: { description: 'Changing color' },
-        }
+        },
       },
       E: {
         subdeterminants: {
           1: { description: 'Ineffective breathing' },
-        }
+        },
       },
-    }
+    },
   },
   32: {
     description: 'Unknown Problem (Man Down)',
@@ -944,14 +944,14 @@ const codes = {
           2: { description: 'Medical alarm (alert) notifications (no patient information)' },
           3: { description: 'Unknown status/other codes not applicable' },
           4: { description: 'Caller\'s language not understood (no interpreter in center)' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Life status questionable' },
-        }
+        },
       },
-    }
+    },
   },
   33: {
     description: 'Transfer/Interfacility/Palliative Care',
@@ -961,7 +961,7 @@ const codes = {
           1: { description: 'Acuity I (no priority symptoms)' },
           2: { description: 'Acuity II (no priority symptoms)' },
           3: { description: 'Acuity III (no priority symptoms)' },
-        }
+        },
       },
       C: {
         subdeterminants: {
@@ -971,15 +971,15 @@ const codes = {
           4: { description: 'Possible acute heart problems or MI (heart attack)' },
           5: { description: 'Acute severe pain' },
           6: { description: 'Emergency response requested' },
-        }
+        },
       },
       D: {
         subdeterminants: {
           1: { description: 'Suspected cardiac or respiratory arrest' },
           2: { description: 'Just resuscitated and/or defibrillated (external)' },
-        }
-      }
-    }
-  }
-}
-export default codes ;
+        },
+      },
+    },
+  },
+};
+export default codes;

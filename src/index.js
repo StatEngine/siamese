@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import proj4 from 'proj4';
 import _ from 'lodash';
 import { validate } from 'jsonschema';
-import { ShiftConfiguration } from '@statengine/shiftly';
+import { ShiftConfiguration, FirecaresLookup } from '@statengine/shiftly';
 import { schemas } from '@statengine/schemas';
 import fs from 'fs';
 import xml2js from 'xml2js';
@@ -65,7 +65,13 @@ export default class IncidentNormalizer extends BaseNormalizer {
     this.firecaresId = firecaresId;
     this.name = name;
     this.state = state;
-    this.shiftConfig = new ShiftConfiguration(shiftConfig);
+    // First use firecaresId to see if shift configuration exists in shiftly
+    const shiftlyConfig = IncidentNormalizer.lookupShiftlyConfig(this.firecaresId);
+    if (shiftlyConfig != null) {
+      this.shiftConfig = shiftlyConfig;
+    } else {
+      this.shiftConfig = new ShiftConfiguration(shiftConfig);
+    }
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -129,8 +135,11 @@ export default class IncidentNormalizer extends BaseNormalizer {
     clearedPropeties = _.filter(clearedPropeties, prop => !_.isNil(prop));
 
     let cleared;
-    if (clearedPropeties.length > 0) cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
-    else cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
+    if (clearedPropeties.length > 0) {
+      cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
+    } else {
+      cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
+    }
 
     const requirements = {
       travel_duration: [unitStatus.arrived, unitStatus.enroute],
@@ -248,6 +257,15 @@ export default class IncidentNormalizer extends BaseNormalizer {
       });
     })
       .then(jsons => this.fromStrings(jsons, ...args));
+  }
+
+  static lookupShiftlyConfig(firecaresId) {
+    const shiftlyFactoryMethod = FirecaresLookup[firecaresId];
+    let shiftlyConfig = null;
+    if (shiftlyFactoryMethod != null) {
+      shiftlyConfig = shiftlyFactoryMethod();
+    }
+    return shiftlyConfig;
   }
 }
 
