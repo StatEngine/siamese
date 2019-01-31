@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import CODES from './priorityDispatchCodes';
 
-const PRIORITY_DISPATCH_REGEX = /([0-9]+?)([ABCDEO])([0-9a-z]*)/;
-const SUBDETERMINATE_REGEX = /([0-9]+)([a-z]*)/;
+const PRIORITY_DISPATCH_REGEX = /([0-9]+?)([ABCDEO])([0-9a-zA-Z]*)/;
+const SUBDETERMINATE_REGEX = /([0-9]+)([a-zA-Z]*)/;
 
 function split(code) {
   /**
@@ -16,6 +16,7 @@ function split(code) {
     return {};
   }
 
+  // [0] is fullMatch
   const [, protocol, determinate, subDeterminate] = check;
 
   return {
@@ -34,6 +35,7 @@ function getProtocolDescription(protocol) {
 
 function getSubDeterminateDescription(protocol, determinate, subDeterminate) {
   if (protocol && determinate && subDeterminate) {
+    // [0] is full match
     const [, noSuffix] = subDeterminate.toString().match(SUBDETERMINATE_REGEX);
     return _.get(CODES, `[${Number(protocol).toString()}]determinates[${determinate}]subdeterminants[${Number(noSuffix).toString()}.description]`);
   }

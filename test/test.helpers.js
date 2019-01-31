@@ -17,6 +17,7 @@ describe('Helpers', () => {
         expect(helpers.priorityDispatch.getSubDeterminateDescription(1, 'A', 1)).to.equal('Abdominal pain');
         expect(helpers.priorityDispatch.getSubDeterminateDescription(1, 'A', '1')).to.equal('Abdominal pain');
         expect(helpers.priorityDispatch.getSubDeterminateDescription('01', 'A', '1a')).to.equal('Abdominal pain');
+        expect(helpers.priorityDispatch.getSubDeterminateDescription('01', 'A', '1A')).to.equal('Abdominal pain');
         expect(helpers.priorityDispatch.getSubDeterminateDescription('01', 'B', '1a')).to.be.undefined;
       });
 
