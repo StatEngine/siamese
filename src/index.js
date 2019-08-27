@@ -146,6 +146,8 @@ export default class IncidentNormalizer extends BaseNormalizer {
       turnout_duration: [unitStatus.enroute, unitStatus.dispatched],
       response_duration: [unitStatus.arrived, unitStatus.dispatched],
       event_duration: [cleared, unitStatus.dispatched],
+      transport_duration: [unitStatus.transport_arrived, unitStatus.transport_started],
+      at_hospital_duration: [cleared, unitStatus.transport_arrived]
     };
 
     Object.entries(requirements).forEach(([key, value]) => {
