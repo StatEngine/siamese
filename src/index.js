@@ -145,6 +145,7 @@ export default class IncidentNormalizer extends BaseNormalizer {
       travel_duration: [unitStatus.arrived, unitStatus.enroute],
       turnout_duration: [unitStatus.enroute, unitStatus.dispatched],
       response_duration: [unitStatus.arrived, unitStatus.dispatched],
+      on_scene_duration: [cleared, unitStatus.arrived],
       event_duration: [cleared, unitStatus.dispatched],
       transport_duration: [unitStatus.transport_arrived, unitStatus.transport_started],
       at_hospital_duration: [cleared, unitStatus.transport_arrived]
