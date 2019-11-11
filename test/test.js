@@ -48,13 +48,21 @@ describe('IncidentNormalizer', () => {
         longitude: -77.12726809345266,
         timestamp: '2017-12-30T19:00:31-05:00',
       },
+      cleared: {
+        latitude: 38.88785485040848,
+        longitude: -77.12726809345266,
+        timestamp: '2017-12-30T19:17:31-05:00',
+      },
     };
 
     const times = IncidentNormalizer.calculateUnitStatusExtendedData(unitStatus);
     expect(times.turnout_duration).to.equal(31);
     expect(times.travel_duration).to.equal(319);
     expect(times.response_duration).to.equal(350);
-    expect(times.event_duration).to.equal(1400);
+    expect(times.event_duration).to.equal(2420);
+    expect(times.at_hospital_duration).to.equal(1020);
+    expect(times.transport_duration).to.equal(574);
+    expect(times.on_scene_duration).to.equal(476);
   });
 
   it('calculateUnitStatusExtendedData should calculate event_duration based on earliest cleared timestamp', () => {

@@ -141,11 +141,18 @@ export default class IncidentNormalizer extends BaseNormalizer {
       cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
     }
 
+    let scene_left;
+    if (unitStatus.transport_started) {
+      scene_left = unitStatus.transport_started;
+    } else {
+      scene_left = cleared;
+    }
+
     const requirements = {
       travel_duration: [unitStatus.arrived, unitStatus.enroute],
       turnout_duration: [unitStatus.enroute, unitStatus.dispatched],
       response_duration: [unitStatus.arrived, unitStatus.dispatched],
-      on_scene_duration: [cleared, unitStatus.arrived],
+      on_scene_duration: [scene_left, unitStatus.arrived],
       event_duration: [cleared, unitStatus.dispatched],
       transport_duration: [unitStatus.transport_arrived, unitStatus.transport_started],
       at_hospital_duration: [cleared, unitStatus.transport_arrived]
@@ -158,7 +165,6 @@ export default class IncidentNormalizer extends BaseNormalizer {
       times[key] = IncidentNormalizer.calculateDuration(moment(value[1].timestamp),
         moment(value[0].timestamp));
     });
-
     return times;
   }
 
