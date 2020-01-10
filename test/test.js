@@ -43,6 +43,11 @@ describe('IncidentNormalizer', () => {
         longitude: -77.13305689919378,
         timestamp: '2017-12-30T18:43:01-05:00',
       },
+      patient_contact: {
+        latitude: 38.84776403520299,
+        longitude: -77.13305689919378,
+        timestamp: '2017-12-30T18:45:01-05:00',
+      },
       transport_started: {
         latitude: 38.847789177196,
         longitude: -77.13341200471721,
@@ -63,12 +68,15 @@ describe('IncidentNormalizer', () => {
     const times = IncidentNormalizer.calculateUnitStatusExtendedData(unitStatus);
     expect(times.turnout_duration).to.equal(31);
     expect(times.travel_duration).to.equal(240);
-    expect(times.response_duration).to.equal(350);
+    expect(times.response_duration).to.equal(271);
     expect(times.event_duration).to.equal(2420);
     expect(times.at_hospital_duration).to.equal(1020);
     expect(times.transport_duration).to.equal(574);
-    expect(times.on_scene_duration).to.equal(476);
+    expect(times.on_scene_duration).to.equal(555);
     expect(times.staging_duration).to.equal(79);
+    expect(times.patient_contact_to_transport_arrived_duration).to.equal(930);
+    expect(times.on_scene_to_transport_arrived_duration).to.equal(1129);
+    expect(times.on_scene_to_patient_contact).to.equal(199);
   });
 
   it('calculateUnitStatusExtendedData should calculate event_duration based on earliest cleared timestamp', () => {
