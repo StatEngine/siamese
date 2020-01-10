@@ -123,20 +123,20 @@ export default class IncidentNormalizer extends BaseNormalizer {
 
     const arr = _.values(unitStatus);
 
-    let clearedPropeties = [];
+    let clearedProperties = [];
 
     _.map([
       'available',
       'in_quarters',
       'available_radio',
       'available_mobile',
-      'cleared'], key => clearedPropeties.push(_.get(unitStatus, `${key}`)));
+      'cleared'], key => clearedProperties.push(_.get(unitStatus, `${key}`)));
 
-    clearedPropeties = _.filter(clearedPropeties, prop => !_.isNil(prop));
+    clearedProperties = _.filter(clearedProperties, prop => !_.isNil(prop));
 
     let cleared;
-    if (clearedPropeties.length > 0) {
-      cleared = _.minBy(clearedPropeties, o => moment(o.timestamp).valueOf());
+    if (clearedProperties.length > 0) {
+      cleared = _.minBy(clearedProperties, o => moment(o.timestamp).valueOf());
     } else {
       cleared = _.maxBy(arr, o => moment(o.timestamp).valueOf());
     }
@@ -148,9 +148,17 @@ export default class IncidentNormalizer extends BaseNormalizer {
       scene_left = cleared;
     }
 
+    let scene_arrived;
+    if (unitStatus.staging) {
+      scene_arrived = unitStatus.staging;
+    } else {
+      scene_arrived = unitStatus.arrived;
+    }
+
     const requirements = {
-      travel_duration: [unitStatus.arrived, unitStatus.enroute],
       turnout_duration: [unitStatus.enroute, unitStatus.dispatched],
+      travel_duration: [scene_arrived, unitStatus.enroute],
+      staging_duration: [unitStatus.arrived, unitStatus.staging],
       response_duration: [unitStatus.arrived, unitStatus.dispatched],
       on_scene_duration: [scene_left, unitStatus.arrived],
       event_duration: [cleared, unitStatus.dispatched],
