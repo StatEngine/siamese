@@ -1,6 +1,6 @@
 {
   "name": "@statengine/siamese",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Normalizes public safety data.",
   "main": "lib",
   "scripts": {
@@ -19,12 +19,12 @@
     "babel-register": "^6.24.1",
     "babel-tap": "^5.0.0",
     "chai": "4.1.0",
-    "mocha": "4.1.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.0",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "mocha": "4.1.0"
   },
   "dependencies": {
     "@statengine/schemas": "latest",
