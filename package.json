@@ -1,6 +1,6 @@
 {
   "name": "@statengine/siamese",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Normalizes public safety data.",
   "main": "lib",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@statengine/schemas": "latest",
-    "@statengine/shiftly": "latest",
+    "@statengine/shiftly": "^0.0.104",
     "ajv": "^5.5.2",
     "bluebird": "^3.5.3",
     "jsonschema": "^1.1.1",
