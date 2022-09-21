@@ -29,7 +29,7 @@
   "dependencies": {
     "@statengine/schemas": "latest",
     "@statengine/shiftly": "^0.0.114",
-    "ajv": "^5.5.2",
+    "ajv": "^6.12.3",
     "bluebird": "^3.5.3",
     "jsonschema": "^1.1.1",
     "lodash": "^4.17.20",
