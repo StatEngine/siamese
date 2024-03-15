@@ -1,6 +1,6 @@
 {
   "name": "@statengine/siamese",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Normalizes public safety data.",
   "main": "lib",
   "scripts": {
